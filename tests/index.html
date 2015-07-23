@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquery-tabs Tests</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../jquery.tabs.css"/>
+    </head>
+
+    <body>
+        <h1>jquery-tabs Tests</h1>
+
+        <div id="test-1">
+            <h2>Test 1</h2>
+
+            <div id="lift_tabs">
+                <ul class="ul_tabs_labels">
+                    <li> <a href="#AIGUILLEDUMIDI">AIGUILLE DU MIDI</a></li>
+                    <li> <a href="#BREVENT">BREVENT</a></li>
+                    <li> <a href="#DOMAINEDEBALME">DOMAINE DE BALME</a></li>
+                    <li> <a href="#FLEGERE">FLEGERE</a></li>
+                    <li> <a href="#GRANDSMONTETS">GRANDS MONTETS</a></li>
+                    <li> <a href="#LESBOSSONS">LES BOSSONS</a></li>
+                    <li> <a href="#LESHOUCHES">LES HOUCHES</a></li>
+                    <li> <a href="#PLANARDS">PLANARDS</a></li>
+                    <li> <a href="#SITEDUMONTENVERS">SITE DU MONTENVERS</a></li>
+                    <li> <a href="#TRAMWAYMONTBLANC">TRAMWAY MONT BLANC</a></li>
+                </ul>
+                <div class="area" id="AIGUILLEDUMIDI">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  AIGUILLE DU MIDI</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;06:45 18:00</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  PLAN DE L'AIGUILLE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;06:30 18:00</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> PANORAMIC MONT BLANC</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;07:15 16:00</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="closed">Closed</div>
+                            <span style="">ASCENSEUR</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp; </span> &nbsp;&nbsp;scheduled opening on 8th of august</span>
+                        </li>
+                        <li class="rm">
+                            <div class="closed">Closed</div>
+                            <span style="">ARETE SOMMITALE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp; </span> &nbsp;&nbsp;un-equipped - Crevasse -</span>
+                        </li>
+                        <li class="piste">
+                            <div class="closed">Closed</div>
+                            <span style="">PAS DANS LE VIDE</span><span class="message">  &nbsp;&nbsp;scheduled opening on 8th of august</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="DOMAINEDEBALME">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> CHARAMILLON</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:30 17:30</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> VALLORCINE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:30 17:30</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> AUTANNES</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:45 17:15</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="GRANDSMONTETS">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  GRANDS MONTETS</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;07:50 16:40</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  LOGNAN</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;07:30 17:00</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="PLANARDS">
+                    <ul>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">LUGE DE CHAMONIX</span><span class="message">  </span>
+                        </li>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">PARC D'ATTRACTIONS</span><span class="message">  </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="SITEDUMONTENVERS">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">TRAIN MONTENVERS MER DE GLACE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:00 18:30</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> MER DE GLACE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;09:30 16:30</span> </span>
+                        </li>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">GALERIE DES CRISTAUX</span><span class="message">  </span>
+                        </li>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">GLACIORIUM</span><span class="message">  </span>
+                        </li>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">GROTTE DE GLACE</span><span class="message">  </span>
+                        </li>
+                        <li class="piste">
+                            <div class="open">Open</div>
+                            <span style="">TEMPLE DE LA NATURE</span><span class="message">  </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">HOTEL-RESTAURANT DU MONTENVERS</span><span class="message">  </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="TRAMWAYMONTBLANC">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">TRAIN BELLEVUE-NID D'AIGLE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:10 18:30</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">TRAIN COL DE VOZA-BELLEVUE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:00 18:20</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">TRAIN FAYET-COL DE VOZA</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;07:20 17:40</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="BREVENT">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  BREVENT</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:30 17:45</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> PLANPRAZ</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:15 18:00</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="FLEGERE">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  FLEGERE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:00 17:45</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> INDEX</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:15 17:30</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="LESHOUCHES">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style="">  BELLEVUE</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;07:30 18:00</span> </span>
+                        </li>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> PRARION</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;09:00 17:30</span> </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area" id="LESBOSSONS">
+                    <ul>
+                        <li class="rm">
+                            <div class="open">Open</div>
+                            <span style=""> LES BOSSONS</span><span class="message"> <span style="color:#000">&nbsp;&nbsp;&nbsp;08:30 18:30</span> </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="../jquery.tabs.min.js"></script>
+
+        <script>
+/*globals jQuery, document, console*/
+jQuery(document).ready(function () {
+    'use strict';
+
+    jQuery('#test-1').each(function () {
+        jQuery('#lift_tabs').tabs({
+            select: function (ignore, ui) {
+                console.log('Test 1:', ui);
+            }
+        });
+    });
+});
+        </script>
+    </body>
+</html>

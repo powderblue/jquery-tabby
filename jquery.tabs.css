@@ -1,0 +1,41 @@
+.tabby-tabs {
+    float: left;
+    width: 100%;
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+}
+
+.tabby-tabs .tabby-tab {
+    float: left;
+    display: block;
+    background-color: #f6f6f6;
+    padding: .5em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+    border-bottom-color: #666;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-top-left-radius: 3px;
+    -moz-border-top-right-radius: 3px;
+}
+
+.tabby-tabs .tabby-tab.tabby-selected {
+    background-color: #fff;
+    border-left-color: #333;
+    border-top-color: #333;
+    border-right-color: #333;
+    border-bottom: 0;
+}
+
+.tabby-page {
+    display: none;
+    clear: both;
+}
+
+.tabby-page.tabby-selected {
+    display: block;
+}
