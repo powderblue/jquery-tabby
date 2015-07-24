@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>jquery-tabs Tests</title>
+        <title>jquery-tabby Tests</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../jquery.tabs.css"/>
+        <link rel="stylesheet" type="text/css" href="../jquery.tabby.css"/>
     </head>
 
     <body>
-        <h1>jquery-tabs Tests</h1>
+        <h1>jquery-tabby Tests</h1>
 
         <div id="test-1">
             <h2>Test 1</h2>
@@ -191,7 +191,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="../jquery.tabs.min.js"></script>
+        <script src="../jquery.tabby.js"></script>
 
         <script>
 /*globals jQuery, document, console*/
@@ -199,7 +199,7 @@ jQuery(document).ready(function () {
     'use strict';
 
     jQuery('#test-1').each(function () {
-        jQuery('#lift_tabs').tabs({
+        jQuery('#lift_tabs').tabby({
             select: function (ignore, ui) {
                 console.log('Test 1:', ui);
             }

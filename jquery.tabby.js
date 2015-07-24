@@ -234,7 +234,7 @@
          * @param {Object} options
          * @returns {jQuery}
          */
-        tabs: function (options) {
+        tabby: function (options) {
             return this.each(function () {
                 var $tabCanvas = jQuery(this);
 
