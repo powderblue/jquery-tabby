@@ -21,9 +21,11 @@
     -webkit-border-top-right-radius: 3px;
     -moz-border-top-left-radius: 3px;
     -moz-border-top-right-radius: 3px;
+    cursor: pointer;
 }
 
 .tabby-tabs .tabby-tab.tabby-selected {
+    font-weight: bold;
     background-color: #fff;
     border-left-color: #333;
     border-top-color: #333;
