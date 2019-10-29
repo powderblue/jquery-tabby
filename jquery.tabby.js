@@ -1,5 +1,5 @@
-/*jslint this:true*/
-/*globals jQuery*/
+/*jslint browser:true this:true long:true*/
+/*global jQuery*/
 /**
  * Lightweight jQuery plugin that creates a tab canvas.
  *
@@ -9,12 +9,12 @@
  */
 
 (function () {
-    'use strict';
+    "use strict";
 
     /**
      * @class
      * @param {jQuery} $el
-     * @param {Object} options
+     * @param {object} options
      */
     function Tabby($el, options) {
         var finalOptions;
@@ -33,9 +33,9 @@
     /**
      * CSS class applied to selected elements.
      *
-     * @type String
+     * @type {string}
      */
-    Tabby.CSS_CLASS_SELECTED = 'tabby-selected';
+    Tabby.CSS_CLASS_SELECTED = "tabby-selected";
 
     Tabby.prototype = {
 
@@ -58,7 +58,7 @@
 
         /**
          * @private
-         * @param {Object} options
+         * @param {object} options
          * @returns {Tabby}
          */
         setOptions: function (options) {
@@ -67,7 +67,7 @@
         },
 
         /**
-         * @returns {Object}
+         * @returns {object}
          */
         getOptions: function () {
             return this.options;
@@ -78,7 +78,7 @@
          * @returns {jQuery}
          */
         findTabsEl: function () {
-            return this.getEl().children('ul, ol').first();
+            return this.getEl().children("ul, ol").first();
         },
 
         /**
@@ -120,11 +120,11 @@
          * @returns {Tabby}
          */
         tabClick: function ($selectedTab) {
-            var selectedTabNo,
-                $selectedPage,
-                pageSelector;
+            var selectedTabNo;
+            var $selectedPage;
+            var pageSelector;
 
-            pageSelector = $selectedTab.data('tabby-page-selector');
+            pageSelector = $selectedTab.data("tabby-page-selector");
 
             if (pageSelector === undefined) {
                 selectedTabNo = $selectedTab.index();
@@ -141,8 +141,8 @@
                 $selectedPage = this.getEl().find(pageSelector);
             }
 
-            if (!($selectedPage && $selectedPage.size())) {
-                throw 'Failed to determine the page to select.';
+            if (!($selectedPage && $selectedPage.length)) {
+                throw "Failed to determine the page to select.";
             }
 
             //Select the page.
@@ -165,49 +165,49 @@
          * @returns {Tabby}
          */
         setUp: function () {
-            var tabby = this,
-                $tabs;
+            var tabby = this;
+            var $tabs;
 
             if (!this.getOptions().createTabs) {
                 $tabs = this.findTabsEl();
 
-                if (!$tabs.size()) {
-                    throw 'Failed to find tabs.';
+                if (!$tabs.length) {
+                    throw "Failed to find tabs.";
                 }
 
                 this.setTabsEl($tabs);
             }
 
-            if (!(this.getTabsEl() && this.getTabsEl().size())) {
-                throw 'There are no tabs.';
+            if (!(this.getTabsEl() && this.getTabsEl().length)) {
+                throw "There are no tabs.";
             }
 
-            this.getEl().addClass('tabby');
+            this.getEl().addClass("tabby");
 
-            this.getTabsEl().addClass('tabby-tabs');
+            this.getTabsEl().addClass("tabby-tabs");
 
             this.getTabEls().each(function () {
-                var $tab = jQuery(this),
-                    $anchors,
-                    firstAnchorHref,
-                    matches;
+                var $tab = jQuery(this);
+                var $anchors;
+                var firstAnchorHref;
+                var matches;
 
-                $anchors = $tab.find('a');
+                $anchors = $tab.find("a");
 
-                if ($anchors.size()) {
+                if ($anchors.length) {
                     //Disable all links within the tab.
                     $anchors.click(function (e) {
                         e.preventDefault();
                     });
 
-                    firstAnchorHref = $anchors.first().attr('href');
+                    firstAnchorHref = $anchors.first().attr("href");
                     matches = firstAnchorHref.match(/^(#.*)$/);
 
                     //Does the link point to something in the page?
                     if (matches !== null) {
                         //Associate the ID of the referenced element (the tab page, we assume) with the tab.  This'll
                         //make selecting the page easier.
-                        $tab.data('tabby-page-selector', matches[1]);
+                        $tab.data("tabby-page-selector", matches[1]);
                     }
                 }
 
@@ -216,10 +216,10 @@
                     .click(function () {
                         tabby.tabClick(jQuery(this));
                     })
-                    .addClass('tabby-tab');
+                    .addClass("tabby-tab");
             });
 
-            this.getPageEls().addClass('tabby-page');
+            this.getPageEls().addClass("tabby-page");
 
             //Kick things off by selecting the first page.
             this.tabClick(this.getTabEls().first());
@@ -231,7 +231,7 @@
     jQuery.fn.extend({
 
         /**
-         * @param {Object} options
+         * @param {object} options
          * @returns {jQuery}
          */
         tabby: function (options) {
@@ -239,8 +239,8 @@
                 var $tabCanvas = jQuery(this);
 
                 $tabCanvas
-                    .data('tabby', new Tabby($tabCanvas, options))
-                    .data('tabby')
+                    .data("tabby", new Tabby($tabCanvas, options))
+                    .data("tabby")
                         .setUp();
             });
         }
